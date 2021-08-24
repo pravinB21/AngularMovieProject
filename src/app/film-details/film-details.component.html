@@ -1,0 +1,87 @@
+<div class="jumbotron my-5">
+    <div class="container ">
+        <div class="mycard">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="myleftctn">
+                        <form #form2="ngForm" class="myform text-center" (ngSubmit)="onSubmit(form2.value)" novalidate>
+                            <header class="text-center">FILM Details</header>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input type="text" #name='ngModel' ngModel name="name"
+                                            [class.is-invalid]="name.invalid && name.touched" required
+                                            class="form-control" id="myinput" placeholder=" Name" id="myinput">
+                                        <small class="text-danger" [class.d-none]="name.valid || name.untouched">First
+                                            name
+                                            is required</small>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input type="number" #boxOfficeCollection="ngModel" required ngModel
+                                            [class.is-invalid]="boxOfficeCollection.invalid && boxOfficeCollection.touched"
+                                            name="boxOfficeCollection" class="form-control" id="myinput"
+                                            placeholder="boxOfficeCollection">
+                                        <!-- <small class="text-danger" [class.d-none]='boxOfficeCollection.valid || boxOfficeCollection.untouched'>age is
+                                        required</small> -->
+                                        <!-- <small class="text-danger" *ngIf='token==1'>user already exists</small> -->
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input type="number" #rating='ngModel' name="ratings" ngModel
+                                            class="form-control" id="myinput" required placeholder="rating">
+                                        <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <!-- <label>Confirm Password </label> -->
+                                        <input type="text" #director='ngModel' name="director" ngModel
+                                            [class.is-invalid]="director.invalid && director.touched" required
+                                            class="form-control" id="myinput" placeholder="director name">
+                                        <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div ngModelaGroup="Address"> -->
+
+
+
+
+                            <br>
+
+                            <button class="btn btn-dark " id="butt">Add Film</button><br><br>
+                            <h5 id="demo"></h5>
+                            <h6>Go back to <a routerLink='/home'>Home</a></h6>
+
+
+
+
+
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

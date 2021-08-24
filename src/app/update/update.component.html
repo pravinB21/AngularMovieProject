@@ -1,0 +1,68 @@
+<div class="jumbotron my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="container ">
+                    <div class="mycard">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="myleftctn">
+                                    <form #form3="ngForm" class="myform text-center" (ngSubmit)="onSubmit(form3.value)" novalidate>
+                                        <header class="text-center">Update Form</header>
+                
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <input type="text" #name='ngModel' ngModel name="name"
+                                                        [class.is-invalid]="name.invalid && name.touched" required
+                                                         class="form-control" id="myinput"
+                                                        placeholder=" Name">
+                                                    <small class="text-danger" [class.d-none]="name.valid || name.untouched">First name
+                                                        is required</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <input type="number" #age="ngModel" required ngModel
+                                                         name="age" id="myinput"
+                                                        class="form-control"  placeholder="age">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                
+                
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <input type="number" #awardCount='ngModel' name="awardCount" ngModel
+                                                        class="form-control" id="myinput" required
+                                                        placeholder="awardCount"  >
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                                    
+                                        <br>
+                
+                                        <button class="btn btn-dark " id="butt" >Update</button><br><br>
+                                        <h5 id="demo"></h5>
+                                        <h6>Go back to <a routerLink='/'>Home</a></h6>                 
+                                    </form>
+                                </div>
+                
+                            </div>
+                            
+                        </div>
+                
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

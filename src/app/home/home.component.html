@@ -1,0 +1,30 @@
+<div class="container my-5 ">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Delete Movie here</h4>
+                <div class="form-group">
+                    <input type="text" #in placeholder="enter movie name to delete"  class="form-control" id="usr">
+                  </div>
+            </div>
+        </div>
+    
+        <h5 id="demo"></h5>
+        <div class="row my-5">
+            <div class="col-md-12">
+                <button class="btn btn-danger" (click)='deleteMovie(in.value)' style="width: 100%;">delete movie</button>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-md-12">
+                <button class="btn btn-info" routerLink='/update' style="width: 100%;">Update Director's age & award count</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary" routerLink='/search' style="width: 100%;">Search Director By Name and Movie name</button>
+            </div>
+         
+        </div>
+    </div>    
+</div>

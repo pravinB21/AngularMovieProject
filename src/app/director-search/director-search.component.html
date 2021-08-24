@@ -1,0 +1,60 @@
+<div class="jumbotron">
+    <div class="container my-1 ">
+        <div class="row  d-flex">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input type="text" #search required name="search" class="form-control" id="myinput"
+                        placeholder="search here">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="selection ml-4">
+                    <select name="option" id="" class="custom-select" (change)="getValue($event)">
+                        <option value=""></option>
+                        <option value="director">Search Director</option>
+                        <option value="film">Search for Director by Movie name</option>
+                        <option value="movie">search movies of director</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="search ml-4">
+                    <button class="btn btn-primary" (click)='searchDirector(search.value)' type="submit">Search</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container" *ngIf='directorFlag'>
+    <div class="card my-2 shadow ">
+        <div class="card-body">
+            <h5 class="card-text">Director Name: {{directorData.name}}</h5>
+            <h5 class="card-text">Age: {{directorData.age}}</h5>
+            <h5 class="card-text">Gender: {{directorData.gender}}</h5>
+            <h5 class="card-text">Award Count: {{directorData.awardCount}}</h5>
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf='movieFlag'>
+    <div class="card my-2 shadow ">
+        <div class="card-body">
+            <h5 class="card-text">Director Name: {{directorData.name}}</h5>
+            <h5 class="card-text">Age: {{directorData.age}}</h5>
+            <h5 class="card-text">Gender: {{directorData.gender}}</h5>
+            <h5 class="card-text">Award Count: {{directorData.awardCount}}</h5>
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf='directorFlag2'>
+    <div class="card my-2 shadow" *ngFor="let m of movies">
+        <div class="card-body">
+            <h5 class="card-text">Movie: {{m.name}}</h5>
+            <h5 class="card-text">Box Office Collection: {{m.boxOfficeCollection}}</h5>
+            <h5 class="card-text">Ratings: {{m.ratings}}</h5>
+            <h5 class="card-text">Director: {{m.director}}</h5>
+        </div>
+    </div>
+</div>
