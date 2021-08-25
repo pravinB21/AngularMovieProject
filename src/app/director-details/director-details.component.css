@@ -11,6 +11,7 @@
   margin: auto;
   width: 50%;
   background: rgba(0, 0, 0, 0.3);
+  border-radius: 5%;
 }
 
 .container--margin {
@@ -36,7 +37,7 @@
 }
 .form__input-label {
   color: white;
-  margin: 1%;
+  /* margin: 1%; */
   font-size: large;
 }
 
@@ -72,3 +73,18 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+.form__home{
+  margin-top: 3%;
+}
+/* #myinput{
+    width: 70%;
+    justify-content: center;
+    justify-items: center;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 14px;
+    margin-left: 160px;
+    padding-left: 50px;
+    border: none;
+    box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+  } */
