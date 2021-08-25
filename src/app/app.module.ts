@@ -9,6 +9,7 @@ import { FilmDetailsComponent } from './film-details/film-details.component';
 import { HomeComponent } from './home/home.component';
 import { UpdateComponent } from './update/update.component';
 import { DirectorSearchComponent } from './director-search/director-search.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DirectorSearchComponent } from './director-search/director-search.compo
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
