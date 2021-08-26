@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-director-search',
   templateUrl: './director-search.component.html',
-  styleUrls: ['./director-search.component.css']
+  styleUrls: ['./director-search.component.scss']
 })
 export class DirectorSearchComponent implements OnInit {
 

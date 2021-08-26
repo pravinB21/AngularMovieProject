@@ -1,10 +1,11 @@
+$form-color:white;
 .header {
   padding: 1%;
   margin: auto;
   background: rgba(0, 0, 0, 0.3);
   text-align: center;
   margin-top: 1%;
-  color: white;
+  color:$form-color;
 }
 
 .container {
