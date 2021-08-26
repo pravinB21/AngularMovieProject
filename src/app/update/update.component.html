@@ -1,6 +1,6 @@
 <div class="header">
-    <h3 class="header-title">Add FILM Details</h3>
-  </div>
+  <h3 class="header-title">Add FILM Details</h3>
+</div>
 <div class="container container--margin">
   <div class="row">
     <div class="col-sm-12">
@@ -11,11 +11,10 @@
         novalidate
         autocomplete="off"
       >
-
         <div class="row">
           <div class="col-12">
             <div class="form-group">
-                <label class="form__input-label" for=""> Director Name </label>
+              <label class="form__input-label" for=""> Director Name </label>
               <input
                 type="text"
                 #name="ngModel"
@@ -39,7 +38,7 @@
         <div class="row">
           <div class="col-12">
             <div class="form-group">
-                <label class="form__input-label" for=""> Age </label>
+              <label class="form__input-label" for=""> Age </label>
               <input
                 type="number"
                 #age="ngModel"
@@ -57,7 +56,7 @@
         <div class="row">
           <div class="col-12">
             <div class="form-group">
-                <label class="form__input-label" for=""> Award Count </label>
+              <label class="form__input-label" for=""> Award Count </label>
               <input
                 type="number"
                 #awardCount="ngModel"
@@ -74,10 +73,19 @@
 
         <br />
         <div class="form--center">
-            <button class="form__btn" type="submit">Add Film</button>
-            <h5 id="demo"></h5>
-            <h6 class="form__home">Go back to <a routerLink="/home">Home</a></h6>
+          <button class="form__btn" type="submit">Add Film</button>
+          <h6 class="form__home">Go back to <a routerLink="/home">Home</a></h6>
+        </div>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close" (click)="closeIt()">&times;</span>
+            </div>
+            <div class="modal-body">
+              <p>Your data updated successfully !!</p>
+            </div>
           </div>
+        </div>
       </form>
     </div>
   </div>

@@ -14,13 +14,36 @@ export class FilmDetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+modal:any;
+span:any;
+  modalCode = () => {
+        this.modal = document.getElementById("myModal");
+      // Get the <span> element that closes the modal
+       this.span = document.getElementsByClassName("close")[0];
+  
+      this.modal.style.display = "block";
+  
+      // When the user clicks on <span> (x), close the modal
+      this.span.onclick = function () {
+       this.modal.style.display = "none";
+        
+      };
+  
+      // When the user clicks anywhere outside of the modal, close it
+      // window.onclick = function (event) {
+      //   if (event.target == modal) {
+      //     this.modal.style.display = "none";
+      //   }
+      // };
+    };
+    closeIt(){
+      this.modal.style.display="none";
+    }
   onSubmit(details:any){
     console.log(details);
     this.director1=details;
     this.postData(this.director1).subscribe(data=>{
-      const h1=document.getElementById('demo') 
-      h1!.innerHTML='Added Successfully !!';
+      this.modalCode();
     })
   }
 
