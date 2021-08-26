@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { UpdateComponent } from './update/update.component';
 import { DirectorSearchComponent } from './director-search/director-search.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DeleteMovieComponent } from './delete-movie/delete-movie.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FilmDetailsComponent,
     HomeComponent,
     UpdateComponent,
-    DirectorSearchComponent
+    DirectorSearchComponent,
+    DeleteMovieComponent
   ],
   imports: [
     BrowserModule,
