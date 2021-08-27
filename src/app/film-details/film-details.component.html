@@ -11,8 +11,8 @@
         autocomplete="off"
       >
         <div class="form-input">
-          <div class="form-group">
-            <label class="form__input-label" for=""> Movie Name </label>
+          <div class="form-input__group">
+            <label class="form" for=""> Movie Name </label>
             <input
               type="text"
               #name="ngModel"
@@ -22,7 +22,7 @@
               required
               class="form-control"
               id="myinput"
-              placeholder=" Name"
+              placeholder="Name"
               id="myinput"
             />
             <small
@@ -96,22 +96,10 @@
         <br />
         <div class="form--center">
           <button class="form__btn" type="submit">Add Film</button>
+          <h5 id="demo"></h5>
           <h6 class="form__home">Go back to <a routerLink="/home">Home</a></h6>
         </div>
-<<<<<<< HEAD
 
-=======
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <div class="modal-header">
-              <span class="close" (click)="closeIt()">&times;</span>
-            </div>
-            <div class="modal-body">
-              <p>Your data uploaded successfully !!</p>
-            </div>
-          </div>
-        </div>
->>>>>>> 945d21dde71ec2a0263f6256b761790def36dde0
       </form>
   
 </div>
