@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { DeleteMovieComponent } from './delete-movie/delete-movie.component';
 import { DirectorDetailsComponent } from './director-details/director-details.component';
 import { DirectorSearchComponent } from './director-search/director-search.component';
 import { FilmDetailsComponent } from './film-details/film-details.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'director',component:DirectorDetailsComponent},
   {path:'film',component:FilmDetailsComponent},
   {path:'update',component:UpdateComponent},
-  {path:'search',component:DirectorSearchComponent}
+  {path:'search',component:DirectorSearchComponent},
+  {path:'deleteMovie',component:DeleteMovieComponent}
 
 ];
 
