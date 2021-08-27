@@ -1,79 +1,94 @@
-.header {
-  padding: 1%;
+.modal {
+  display: none;
+  /* Hidden by default */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 15%;
+  /* Location of the box */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  color: black;
+  font-weight: bold;
+  position: relative;
+  background-color: #fefefe;
   margin: auto;
-  background: rgba(0, 0, 0, 0.3);
-  text-align: center;
-  margin-top: 1%;
-  color: white;
+  padding: 0;
+  border: 1px solid #888;
+  width: 40%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
 }
 
-.container {
-  margin: auto;
-  width: 50%;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 5%;
-}
-
-.container--margin {
-  margin-top: 1%;
-}
-
-@media only screen and (max-width: 600px) {
-  .container {
-    margin: auto;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.3);
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
   }
 }
 
-.form {
-  padding: 3%;
-  color: white;
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
-.form-input {
-  width: 100%;
-  margin: 1%;
-}
-.form__input-label {
-  color: white;
-  /* margin: 1%; */
-  font-size: large;
-}
-
-.form-control {
-  width: 100%;
-  background: none;
-  border: 1px solid white;
-  color: white;
-  font-size: medium;
-  border-radius: 5px;
-  padding: 7px;
-  padding-left: 12px;
-}
-
-.form--center {
-  text-align: center;
-}
-
-.form__btn {
-  color: white;
-  background-color: transparent;
-  height: 40px;
-  width: 100px;
-  border-radius: 5px;
-  outline: 0;
-  border-color: white;
-  
-}
-
-.form__btn:hover {
-  background-color: white;
+/* The Close Button */
+.modal-close {
   color: black;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-.form__home{
-  margin-top: 3%;
+.modal-close:hover,
+.modal-close:focus {
+  color: #1c2527;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #3bb7c4;
+  color: white;
+}
+
+.modal-body {
+  padding: 2%;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #3bb7c4;
+  color: white;
+}
+
+.content {
+  width: 50%;
 }

@@ -10,9 +10,8 @@
         novalidate
         autocomplete="off"
       >
-        <div class="form-input">
-              <div class="form-group">
-                <label class="form__input-label" for=""> Director Name </label>
+        <div class="form__input">
+                <label class="form__input-label" for="">Director Name</label>
                 <input
                   type="text"
                   #name="ngModel"
@@ -22,7 +21,7 @@
                   required
                   class="form-control"
                   id="myinput"
-                  placeholder=" Name"
+                  placeholder="Name"
                 />
                 <small
                   class="text-danger"
@@ -35,11 +34,11 @@
                 >
               </div>
           
-        </div>
-        <div class="form-input">
+
+        <div class="form__input">
         
-              <div class="form-group">
-                <label class="form__input-label" for=""> Age </label>
+            
+                <label class="form__input-label" for="">Age</label>
                 <input
                   type="number"
                   #age="ngModel"
@@ -58,12 +57,11 @@
                   >age is required</small
                 >
              
-          </div>
-        </div>
-        <div class="form-input">
           
-              <div class="form-group">
-                <label class="form__input-label" for=""> Gender </label>
+        </div>
+        <div class="form__input">
+          
+                <label class="form__input-label" for="">Gender</label>
                 <input
                   type="text"
                   #gender="ngModel"
@@ -72,16 +70,15 @@
                   class="form-control"
                   minlength="6"
                   id="myinput"
-                  placeholder="gender"
+                  placeholder="Gender"
                 />
                 <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
               </div>
           
-        </div>
-        <div class="form-input">
+        
+        <div class="form__input">
          
-              <div class="form-group">
-                <label class="form__input-label" for=""> Award Count </label>
+                <label class="form__input-label" for="myinput">Award Count</label>
                 <!-- <label>Confirm Password </label> -->
                 <input
                   type="number"
@@ -97,7 +94,7 @@
                 <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
               </div>
             
-        </div>
+        
 
         <br />
 
