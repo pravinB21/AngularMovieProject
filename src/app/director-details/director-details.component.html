@@ -19,7 +19,7 @@
                   name="name"
                   [class.is-invalid]="name.invalid && name.touched"
                   required
-                  class="form-control"
+                  class="form__input-field"
                   id="myinput"
                   placeholder="Name"
                 />
@@ -46,7 +46,7 @@
                   ngModel
                   [class.is-invalid]="age.invalid && age.touched"
                   name="age"
-                  class="form-control"
+                  class="form__input-field"
                   id="myinput"
                   placeholder="Age"
                   (click)="invalidName(name.value)"
@@ -67,7 +67,7 @@
                   #gender="ngModel"
                   name="gender"
                   ngModel
-                  class="form-control"
+                  class="form__input-field"
                   minlength="6"
                   id="myinput"
                   placeholder="Gender"
@@ -87,7 +87,7 @@
                   ngModel
                   [class.is-invalid]="awardCount.invalid && awardCount.touched"
                   required
-                  class="form-control"
+                  class="form__input-field"
                   id="myinput"
                   placeholder="Award Count"
                 />

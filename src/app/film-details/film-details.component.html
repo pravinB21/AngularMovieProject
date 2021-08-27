@@ -20,7 +20,7 @@
                   ngModel
                   name="name"
                   required
-                  class="form-control"
+                  class="form__input-field"
                   id="movie"
                   placeholder="Name"
                 />
@@ -43,7 +43,7 @@
                   required
                   ngModel
                   name="BoxOfficeCollection"
-                  class="form-control"
+                  class="form__input-field"
                   id="boxOfficeCollection"
                   placeholder="boxOfficeCollection"
                 />
@@ -60,7 +60,7 @@
                   #rating="ngModel"
                   name="ratings"
                   ngModel
-                  class="form-control"
+                  class="form__input-field"
                   required
                   id="rating"
                   placeholder="Rating"
@@ -78,9 +78,9 @@
                   ngModel
                   [class.is-invalid]="director.invalid && director.touched"
                   required
-                  class="form-control"
+                  class="form__input-field"
                   id="director"
-                  placeholder="Director Name"
+                  placeholder="Director name"
                 />
                 <small class="text-danger" [class.d-none]="director.valid || director.untouched">Director is required</small>
 
