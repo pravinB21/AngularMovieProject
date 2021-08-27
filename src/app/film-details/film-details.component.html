@@ -2,7 +2,8 @@
   <h3 class="header-title">Add Film Details</h3>
 </div>
 <div class="container container--margin">
-
+  <div class="row">
+    <div class="col-md-12">
       <form
         #form2="ngForm"
         class="form"
@@ -11,95 +12,115 @@
         autocomplete="off"
       >
         <div class="form-input">
-          <div class="form-input__group">
-            <label class="form" for=""> Movie Name </label>
-            <input
-              type="text"
-              #name="ngModel"
-              ngModel
-              name="name"
-              [class.is-invalid]="name.invalid && name.touched"
-              required
-              class="form-control"
-              id="myinput"
-              placeholder="Name"
-              id="myinput"
-            />
-            <small
-              class="text-danger"
-              [class.d-none]="name.valid || name.untouched"
-              >First name is required</small
-            >
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label class="form__input-label" for=""> Movie Name </label>
+                <input
+                  type="text"
+                  #name="ngModel"
+                  ngModel
+                  name="name"
+                  [class.is-invalid]="name.invalid && name.touched"
+                  required
+                  class="form-control"
+                  id="myinput"
+                  placeholder=" Name"
+                  id="myinput"
+                />
+                <small
+                  class="text-danger"
+                  [class.d-none]="name.valid || name.untouched"
+                  >First name is required</small
+                >
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="form-input">
-          <div class="form-group">
-            <label class="form__input-label" for="">
-              Box Office Collection
-            </label>
-            <input
-              type="number"
-              #boxOfficeCollection="ngModel"
-              required
-              ngModel
-              [class.is-invalid]="
-                boxOfficeCollection.invalid && boxOfficeCollection.touched
-              "
-              name="boxOfficeCollection"
-              class="form-control"
-              id="myinput"
-              placeholder="boxOfficeCollection"
-            />
-            <small
-              class="text-danger"
-              [class.d-none]="
-                boxOfficeCollection.valid || boxOfficeCollection.untouched
-              "
-              >BoxOfficeCollection is required</small
-            >
-            <!-- <small class="text-danger" *ngIf='token==1'>user already exists</small> -->
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label class="form__input-label" for="">
+                  Box Office Collection
+                </label>
+                <input
+                  type="number"
+                  #boxOfficeCollection="ngModel"
+                  required
+                  ngModel
+                  [class.is-invalid]="
+                    boxOfficeCollection.invalid && boxOfficeCollection.touched
+                  "
+                  name="boxOfficeCollection"
+                  class="form-control"
+                  id="myinput"
+                  placeholder="boxOfficeCollection"
+                />
+                <!-- <small class="text-danger" [class.d-none]='boxOfficeCollection.valid || boxOfficeCollection.untouched'>age is
+                                        required</small> -->
+                <!-- <small class="text-danger" *ngIf='token==1'>user already exists</small> -->
+              </div>
+            </div>
           </div>
         </div>
         <div class="form-input">
-          <div class="form-group">
-            <label class="form__input-label" for=""> Rating </label>
-            <input
-              type="number"
-              #rating="ngModel"
-              name="ratings"
-              ngModel
-              class="form-control"
-              required
-              placeholder="rating"
-            />
-            <small class="text-danger" [class.d-none]="rating.valid || rating.untouched">Rating is required</small>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label class="form__input-label" for=""> Rating </label>
+                <input
+                  type="number"
+                  #rating="ngModel"
+                  name="ratings"
+                  ngModel
+                  class="form-control"
+                  required
+                  placeholder="rating"
+                />
+                <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
+              </div>
+            </div>
           </div>
         </div>
         <div class="form-input">
-          <div class="form-group">
-            <label class="form__input-label" for=""> Director Name </label>
-            <input
-              type="text"
-              #director="ngModel"
-              name="director"
-              ngModel
-              [class.is-invalid]="director.invalid && director.touched"
-              required
-              class="form-control"
-              id="myinput"
-              placeholder="director name"
-            />
-            <small class="text-danger" [class.d-none]="director.valid || director.untouched">Director name is required</small>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label class="form__input-label" for=""> Director Name </label>
+                <input
+                  type="text"
+                  #director="ngModel"
+                  name="director"
+                  ngModel
+                  [class.is-invalid]="director.invalid && director.touched"
+                  required
+                  class="form-control"
+                  id="myinput"
+                  placeholder="director name"
+                />
+                <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
+              </div>
+            </div>
           </div>
         </div>
         <br />
         <div class="form--center">
           <button class="form__btn" type="submit">Add Film</button>
-          <h5 id="demo"></h5>
           <h6 class="form__home">Go back to <a routerLink="/home">Home</a></h6>
         </div>
-
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close" (click)="closeIt()">&times;</span>
+            </div>
+            <div class="modal-body">
+              <p>Your data uploaded successfully !!</p>
+            </div>
+          </div>
+        </div>
       </form>
-  
+    </div>
+  </div>
 </div>
