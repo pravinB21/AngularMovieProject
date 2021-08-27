@@ -26,16 +26,16 @@
     }
   }
   
-  .form {
+  .del-form {
     padding: 3%;
     color: white;
   }
   
-  .form-input {
+  .del-form__input {
     width: 100%;
     margin: 1%;
   }
-  .form__input-label {
+  .del-form__label {
     color: white;
     /* margin: 1%; */
     font-size: large;
@@ -51,13 +51,14 @@
     padding: 7px;
     padding-left: 12px;
   }
-  .form--center {
+  .del-form--center {
     text-align: center;
   }
   
-  .form__btn {
+  .del-form__btn {
+    margin:2%;
     color: white;
-    background-color: green;
+    background-color:transparent;
     height: 40px;
     width: 130px;
     border-radius: 5px;
@@ -65,14 +66,14 @@
     border-color: white;
     
   }
-  .form__btn:hover {
+  .del-form__btn:hover {
     background-color: white;
     color: black;
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  .form__home{
-    margin-top: 3%;
+  .del-form__home{
+    margin-top: 2%;
   }
 
   .modal {
@@ -136,15 +137,15 @@
   }
   
   /* The Close Button */
-  .close {
+  .modal-close {
     color: black;
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
   
-  .close:hover,
-  .close:focus {
+  .modal-close:hover,
+  .modal-close:focus {
     color: #1c2527;
     text-decoration: none;
     cursor: pointer;

@@ -2,8 +2,7 @@
   <h3 class="header-title">Add Director Details</h3>
 </div>
 <div class="container container--margin">
-  <div class="row">
-    <div class="col-md-12">
+  
       <form
         #form1="ngForm"
         class="form"
@@ -12,8 +11,6 @@
         autocomplete="off"
       >
         <div class="form-input">
-          <div class="row">
-            <div class="col-12">
               <div class="form-group">
                 <label class="form__input-label" for="">Director Name</label>
                 <input
@@ -37,12 +34,10 @@
                   >Director already exists</small
                 >
               </div>
-            </div>
-          </div>
+          
         </div>
         <div class="form-input">
-          <div class="row">
-            <div class="col-12">
+        
               <div class="form-group">
                 <label class="form__input-label" for="">Age</label>
                 <input
@@ -62,13 +57,11 @@
                   [class.d-none]="age.valid || age.untouched"
                   >age is required</small
                 >
-              </div>
-            </div>
+             
           </div>
         </div>
         <div class="form-input">
-          <div class="row">
-            <div class="col-12">
+          
               <div class="form-group">
                 <label class="form__input-label" for="">Gender</label>
                 <input
@@ -83,12 +76,10 @@
                 />
                 <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
               </div>
-            </div>
-          </div>
+          
         </div>
         <div class="form-input">
-          <div class="row">
-            <div class="col-12">
+         
               <div class="form-group">
                 <label class="form__input-label" for="">Award Count</label>
                 <!-- <label>Confirm Password </label> -->
@@ -105,8 +96,7 @@
                 />
                 <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
               </div>
-            </div>
-          </div>
+            
         </div>
 
         <br />
@@ -126,6 +116,5 @@
             </div>
           </div>
       </form>
-    </div>
-  </div>
+   
 </div>
