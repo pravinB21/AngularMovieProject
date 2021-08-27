@@ -1,32 +1,36 @@
-<div class="container my-5">
-    <div class="row">
-      <div class="col-md-12">
-        <form class="form">
-          <div class="form-group">
-            <label class="form__input-label" for="usr">Movie Name</label>
+<div class="header">
+  <h3 class="header-title">Delete Movie By It's Name</h3>
+</div>
+
+<div class="container container--margin">
+
+        <form class="del-form">
+          <div class="del-form__input">
+            <label class="del-form__label" for="usr">Movie Name</label>
             <input
               type="text"
               #in
-              placeholder="enter movie name to delete"
+              placeholder="Enter Movie Name "
               class="form-control"
               id="usr"
             />
           </div>
-          <div class="form--center">
-            <button class="form__btn" (click)='deleteMovie(in.value)'>delete movie</button>
-            <h6 class="form__home">Go back to <a routerLink="/home">Home</a></h6>
+          <div class="del-form--center">
+            <button class="del-form__btn" (click)='deleteMovie(in.value)'>Delete movie</button> 
+            <h6 class="del-form__home">Go back to <a routerLink="/home">Home</a></h6>
           </div>
+        </form>
+
           <div id="myModal" class="modal">
             <div class="modal-content">
               <div class="modal-header">
-                <span class="close" (click)="closeIt()">&times;</span>
+                <span class="modal-close" (click)="closeIt()">&times;</span>
               </div>
               <div class="modal-body">
                 <p>Your data uploaded successfully !!</p>
               </div>
             </div>
           </div>
-        </form>
-    </div>
-  </div>
+       
+  
 </div>

@@ -1,9 +1,9 @@
 <div class="header">
   <h3 class="header-title">Add Film Details</h3>
 </div>
+
 <div class="container container--margin">
-  <div class="row">
-    <div class="col-md-12">
+
       <form
         #form2="ngForm"
         class="form"
@@ -11,38 +11,30 @@
         novalidate
         autocomplete="off"
       >
-        <div class="form-input">
-          <div class="row">
-            <div class="col-12">
-              <div class="form-group">
-                <label class="form__input-label" for=""> Movie Name </label>
+        <div class="form__input">
+       
+                <label class="form__input-label" for="movie"> Movie Name </label>
                 <input
                   type="text"
                   #name="ngModel"
                   ngModel
                   name="name"
-                  [class.is-invalid]="name.invalid && name.touched"
                   required
                   class="form-control"
-                  id="myinput"
-                  placeholder=" Name"
-                  id="myinput"
+                  id="movie"
+                  placeholder="Name"
                 />
                 <small
                   class="text-danger"
                   [class.d-none]="name.valid || name.untouched"
                   >First name is required</small
                 >
-              </div>
-            </div>
-          </div>
+           
+          
         </div>
 
-        <div class="form-input">
-          <div class="row">
-            <div class="col-12">
-              <div class="form-group">
-                <label class="form__input-label" for="">
+        <div class="form__input">
+                <label class="form__input-label" for="boxOfficeCollection">
                   Box Office Collection
                 </label>
                 <input
@@ -50,26 +42,19 @@
                   #boxOfficeCollection="ngModel"
                   required
                   ngModel
-                  [class.is-invalid]="
-                    boxOfficeCollection.invalid && boxOfficeCollection.touched
-                  "
-                  name="boxOfficeCollection"
+                  name="BoxOfficeCollection"
                   class="form-control"
-                  id="myinput"
+                  id="boxOfficeCollection"
                   placeholder="boxOfficeCollection"
                 />
                 <!-- <small class="text-danger" [class.d-none]='boxOfficeCollection.valid || boxOfficeCollection.untouched'>age is
                                         required</small> -->
                 <!-- <small class="text-danger" *ngIf='token==1'>user already exists</small> -->
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-input">
-          <div class="row">
-            <div class="col-12">
-              <div class="form-group">
-                <label class="form__input-label" for=""> Rating </label>
+         
+        <div class="form__input">
+         
+                <label class="form__input-label" for="rating">Rating</label>
                 <input
                   type="number"
                   #rating="ngModel"
@@ -77,18 +62,15 @@
                   ngModel
                   class="form-control"
                   required
-                  placeholder="rating"
+                  id="rating"
+                  placeholder="Rating"
                 />
                 <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-input">
-          <div class="row">
-            <div class="col-12">
-              <div class="form-group">
-                <label class="form__input-label" for=""> Director Name </label>
+ 
+        <div class="form__input">
+         
+                <label class="form__input-label" for="director">Director Name</label>
                 <input
                   type="text"
                   #director="ngModel"
@@ -97,19 +79,19 @@
                   [class.is-invalid]="director.invalid && director.touched"
                   required
                   class="form-control"
-                  id="myinput"
-                  placeholder="director name"
+                  id="director"
+                  placeholder="Director name"
                 />
                 <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
-              </div>
-            </div>
-          </div>
+
+          
         </div>
         <br />
         <div class="form--center">
           <button class="form__btn" type="submit">Add Film</button>
           <h6 class="form__home">Go back to <a routerLink="/home">Home</a></h6>
         </div>
+       </form>
         <div id="myModal" class="modal">
           <div class="modal-content">
             <div class="modal-header">
@@ -120,7 +102,6 @@
             </div>
           </div>
         </div>
-      </form>
-    </div>
-  </div>
+     
+   
 </div>
