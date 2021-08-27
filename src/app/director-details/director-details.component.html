@@ -2,116 +2,97 @@
   <h3 class="header-title">Add Director Details</h3>
 </div>
 <div class="container container--margin">
-  
-      <form
-        #form1="ngForm"
-        class="form"
-        (ngSubmit)="onSubmit(form1.value)"
-        novalidate
-        autocomplete="off"
+  <form
+    #form1="ngForm"
+    class="form"
+    (ngSubmit)="onSubmit(form1.value)"
+    novalidate
+    autocomplete="off"
+  >
+    <div class="form__input">
+      <label class="form__input-label" for="">Director Name</label>
+      <input
+        type="text"
+        #name="ngModel"
+        ngModel
+        name="name"
+        [class.is-invalid]="name.invalid && name.touched"
+        required
+        class="form-control"
+        id="myinput"
+        placeholder="Name"
+      />
+      <small class="text-danger" [class.d-none]="name.valid || name.untouched">
+        name is required</small
       >
-        <div class="form__input">
-                <label class="form__input-label" for="">Director Name</label>
-                <input
-                  type="text"
-                  #name="ngModel"
-                  ngModel
-                  name="name"
-                  [class.is-invalid]="name.invalid && name.touched"
-                  required
-                  class="form-control"
-                  id="myinput"
-                  placeholder="Name"
-                />
-                <small
-                  class="text-danger"
-                  [class.d-none]="name.valid || name.untouched"
-                >
-                  name is required</small
-                >
-                <small class="text-danger" *ngIf="token"
-                  >Director already exists</small
-                >
-              </div>
-          
+      <small class="text-danger" *ngIf="token">Director already exists</small>
+    </div>
 
-        <div class="form__input">
-        
-            
-                <label class="form__input-label" for="">Age</label>
-                <input
-                  type="number"
-                  #age="ngModel"
-                  required
-                  ngModel
-                  [class.is-invalid]="age.invalid && age.touched"
-                  name="age"
-                  class="form-control"
-                  id="myinput"
-                  placeholder="Age"
-                  (click)="invalidName(name.value)"
-                />
-                <small
-                  class="text-danger"
-                  [class.d-none]="age.valid || age.untouched"
-                  >age is required</small
-                >
-             
-          
+    <div class="form__input">
+      <label class="form__input-label" for="">Age</label>
+      <input
+        type="number"
+        #age="ngModel"
+        required
+        ngModel
+        [class.is-invalid]="age.invalid && age.touched"
+        name="age"
+        class="form-control"
+        id="myinput"
+        placeholder="Age"
+        (click)="invalidName(name.value)"
+      />
+      <small class="text-danger" [class.d-none]="age.valid || age.untouched"
+        >age is required</small
+      >
+    </div>
+    <div class="form__input">
+      <label class="form__input-label" for="">Gender</label>
+      <input
+        type="text"
+        #gender="ngModel"
+        name="gender"
+        ngModel
+        class="form-control"
+        minlength="6"
+        id="myinput"
+        placeholder="Gender"
+      />
+      <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
+    </div>
+
+    <div class="form__input">
+      <label class="form__input-label" for="myinput">Award Count</label>
+      <!-- <label>Confirm Password </label> -->
+      <input
+        type="number"
+        #awardCount="ngModel"
+        name="awardCount"
+        ngModel
+        [class.is-invalid]="awardCount.invalid && awardCount.touched"
+        required
+        class="form-control"
+        id="myinput"
+        placeholder="Award Count"
+      />
+      <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
+    </div>
+
+    <br />
+
+    <div class="form--center">
+      <button class="form__btn" type="submit">Add Director</button>
+      <h6 class="form__home">Go back to <a routerLink="/home">Home</a></h6>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close" (click)="closeIt()">&times;</span>
         </div>
-        <div class="form__input">
-          
-                <label class="form__input-label" for="">Gender</label>
-                <input
-                  type="text"
-                  #gender="ngModel"
-                  name="gender"
-                  ngModel
-                  class="form-control"
-                  minlength="6"
-                  id="myinput"
-                  placeholder="Gender"
-                />
-                <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
-              </div>
-          
-        
-        <div class="form__input">
-         
-                <label class="form__input-label" for="myinput">Award Count</label>
-                <!-- <label>Confirm Password </label> -->
-                <input
-                  type="number"
-                  #awardCount="ngModel"
-                  name="awardCount"
-                  ngModel
-                  [class.is-invalid]="awardCount.invalid && awardCount.touched"
-                  required
-                  class="form-control"
-                  id="myinput"
-                  placeholder="Award Count"
-                />
-                <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
-              </div>
-            
-        
-
-        <br />
-
-        <div class="form--center">
-          <button class="form__btn" type="submit">Add Director</button>
-          <h6 class="form__home">Go back to <a routerLink="/home">Home</a></h6>
+        <div class="modal-body">
+          <p>Your data uploaded successfully !!</p>
         </div>
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-              <div class="modal-header">
-                <span class="close" (click)="closeIt()">&times;</span>
-              </div>
-              <div class="modal-body">
-                <p>Your data uploaded successfully !!</p>
-              </div>
-            </div>
-          </div>
-      </form>
-   
+      </div>
+    </div>
+  </form>
 </div>
