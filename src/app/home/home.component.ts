@@ -14,18 +14,4 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  deleteMovie(movie:any){
-    console.log(movie)
-    this.deleteFilm(movie).subscribe(data =>{
-      console.log(data,'deleted')
-      const h1=document.getElementById('demo') 
-      h1!.innerHTML='deleted Successfully !!';
-    })
-  }
-
-  
-
-  deleteFilm(film:any): Observable<any> {
-    return this.http.delete(`http://localhost:4030/deleteFilm/${film}`);
-  }
 }
