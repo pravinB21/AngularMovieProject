@@ -27,7 +27,7 @@
                 <small
                   class="text-danger"
                   [class.d-none]="name.valid || name.untouched"
-                  >First name is required</small
+                  >Movie Name is required</small
                 >
            
           
@@ -47,8 +47,8 @@
                   id="boxOfficeCollection"
                   placeholder="boxOfficeCollection"
                 />
-                <!-- <small class="text-danger" [class.d-none]='boxOfficeCollection.valid || boxOfficeCollection.untouched'>age is
-                                        required</small> -->
+                <small class="text-danger" [class.d-none]='boxOfficeCollection.valid || boxOfficeCollection.untouched'>BoxOfficeCollection is
+                                        required</small>
                 <!-- <small class="text-danger" *ngIf='token==1'>user already exists</small> -->
               </div>
          
@@ -65,7 +65,7 @@
                   id="rating"
                   placeholder="Rating"
                 />
-                <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
+                <small class="text-danger" [class.d-none]="rating.valid || rating.untouched">Rating is required</small>
               </div>
  
         <div class="form__input">
@@ -82,7 +82,7 @@
                   id="director"
                   placeholder="Director Name"
                 />
-                <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
+                <small class="text-danger" [class.d-none]="director.valid || director.untouched">Director is required</small>
 
           
         </div>
@@ -102,6 +102,4 @@
             </div>
           </div>
         </div>
-     
-   
 </div>

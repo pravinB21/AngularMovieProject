@@ -28,7 +28,7 @@
               <small
                 class="text-danger"
                 [class.d-none]="name.valid || name.untouched"
-                >First name is required</small
+                >Director Name is required</small
               >
             </div>
         
@@ -46,9 +46,13 @@
                 class="form-control"
                 placeholder="Age"
               />
+              <small
+              class="text-danger"
+              [class.d-none]="age.valid || age.untouched"
+              >Age is required</small
+            >
             </div>
-        
-
+  
      
             <div class="form__input">
               <label class="form__input-label" for="">Award Count</label>
@@ -62,7 +66,11 @@
                 required
                 placeholder="Award Count"
               />
-           
+              <small
+                class="text-danger"
+                [class.d-none]="awardCount.valid || awardCount.untouched"
+                >Award Count is required</small
+              >
         </div>
 
         <br />

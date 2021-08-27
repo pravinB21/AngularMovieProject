@@ -1,16 +1,18 @@
+$base-color:white;
+$background-color: rgba(0, 0, 0, 0.3);
 .header {
     padding: 1%;
     margin: auto;
-    background: rgba(0, 0, 0, 0.3);
+    background: $background-color;
     text-align: center;
     margin-top: 1%;
-    color: white;
+    color: $base-color;
   }
   
   .container {
     margin: auto;
     width: 50%;
-    background: rgba(0, 0, 0, 0.3);
+    background: $background-color;
     border-radius: 5%;
   }
   
@@ -22,13 +24,13 @@
     .container {
       margin: auto;
       width: 100%;
-      background: rgba(0, 0, 0, 0.3);
+      background: $background-color;
     }
   }
   
   .form {
     padding: 3%;
-    color: white;
+    color: $base-color;
   }
   
   .form__input {
@@ -37,7 +39,7 @@
     margin-bottom: 3%;
   }
   .form__input-label {
-    color: white;
+    color: $base-color;
     /* margin: 1%; */
     font-size: large;
   }
@@ -45,8 +47,8 @@
   .form-control {
     width: 100%;
     background: none;
-    border: 1px solid white;
-    color: white;
+    border: 1px solid $base-color;
+    color: $base-color;
     font-size: medium;
     border-radius: 5px;
     padding: 7px;
@@ -58,18 +60,18 @@
   }
   
   .form__btn {
-    color: white;
+    color: $base-color;
     background-color:transparent;
     height: 40px;
     width: 130px;
     border-radius: 5px;
     outline: 0;
-    border-color: white;
+    border-color: $base-color;
     
   }
   
   .form__btn:hover {
-    background-color: white;
+    background-color: $base-color;
     color: black;
     -webkit-transition: 0.5s;
     transition: 0.5s;
