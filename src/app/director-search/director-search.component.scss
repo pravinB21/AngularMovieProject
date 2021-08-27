@@ -1,0 +1,41 @@
+.header {
+    padding: 1%;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: 1%;
+    color: white;
+  }
+.container {
+    margin: auto;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5%;
+  }
+  
+  .container--margin {
+    margin-top: 1%;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .container {
+      margin: auto;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  .row{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  @media only screen and (min-width: 600px) {
+    .form-control{
+        margin: 7%;
+    }
+  }
+  .form {
+    padding: 3%;
+    color: white;
+  }

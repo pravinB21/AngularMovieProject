@@ -1,14 +1,18 @@
-<div class="jumbotron">
-    <div class="container my-1 ">
-        <div class="row  d-flex">
+<div class="header">
+    <h3 class="header-title">Add FILM Details</h3>
+  </div>
+<div class="container container--margin ">
+        <div class="row">
             <div class="col-md-4">
-                <div class="form-group">
+                <form class="form">
+                <div class="form-group" >
                     <input type="text" #search required name="search" class="form-control" id="myinput"
                         placeholder="search here">
                 </div>
+            </form>
             </div>
             <div class="col-md-4">
-                <div class="selection ml-4">
+                <div class="selection ">
                     <select name="option" id="" class="custom-select" (change)="getValue($event)">
                         <option value=""></option>
                         <option value="director">Search Director</option>
@@ -18,7 +22,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="search ml-4">
+                <div class="search ">
                     <button class="btn btn-primary" (click)='searchDirector(search.value)' type="submit">Search</button>
                 </div>
             </div>
@@ -26,7 +30,6 @@
 
         </div>
     </div>
-</div>
 
 <div class="container" *ngIf='directorFlag'>
     <div class="card my-2 shadow ">
