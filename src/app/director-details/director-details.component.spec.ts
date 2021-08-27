@@ -40,4 +40,10 @@ describe('DirectorDetailsComponent', () => {
     });
   });
 
+  it('should have Add Film Button', () => {
+    fixture = TestBed.createComponent(DirectorDetailsComponent);
+    const btn = fixture.debugElement.nativeElement.querySelector('#add-btn');
+    expect(btn.innerHTML).toBe('Add Director');
+  });
+
 });

@@ -28,6 +28,11 @@ describe('DirectorSearchComponent', () => {
     const comp: DirectorSearchComponent = TestBed.get(DirectorSearchComponent);
     expect(component).toBeTruthy();
   });
+  it('should have Add Film Button', () => {
+    fixture = TestBed.createComponent(DirectorSearchComponent);
+    const btn = fixture.debugElement.nativeElement.querySelector('#search-btn');
+    expect(btn.innerHTML).toBe('Search');
+  });
 
   
 });

@@ -76,6 +76,12 @@ it('should call closeIt',async() => {
   });
 });
 
+it('should have Add Film Button', () => {
+  fixture = TestBed.createComponent(FilmDetailsComponent);
+  const btn = fixture.debugElement.nativeElement.querySelector('#add-btn');
+  expect(btn.innerHTML).toBe('Add Film');
+});
+
 
   
 });
