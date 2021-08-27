@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-director-details',
   templateUrl: './director-details.component.html',
-  styleUrls: ['./director-details.component.scss']
+  styleUrls: ['./director-details.component.scss','../../common.scss']
 })
 export class DirectorDetailsComponent implements OnInit {
 
