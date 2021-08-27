@@ -13,7 +13,7 @@
 
        
             <div class="form-group">
-              <label class="form__input-label" for=""> Director Name </label>
+              <label class="form__input-label" for="">Director Name</label>
               <input
                 type="text"
                 #name="ngModel"
@@ -23,19 +23,19 @@
                 required
                 class="form-control"
                 id="myinput"
-                placeholder=" Name"
+                placeholder="Name"
               />
               <small
                 class="text-danger"
                 [class.d-none]="name.valid || name.untouched"
-                >First name is required</small
+                >Director Name is required</small
               >
             </div>
         
 
        
             <div class="form-group">
-              <label class="form__input-label" for=""> Age </label>
+              <label class="form__input-label" for="">Age</label>
               <input
                 type="number"
                 #age="ngModel"
@@ -44,14 +44,18 @@
                 name="age"
                 id="myinput"
                 class="form-control"
-                placeholder="age"
+                placeholder="Age"
               />
+              <small
+              class="text-danger"
+              [class.d-none]="age.valid || age.untouched"
+              >Age is required</small
+            >
             </div>
-        
-
+  
      
             <div class="form-group">
-              <label class="form__input-label" for=""> Award Count </label>
+              <label class="form__input-label" for="">Award Count</label>
               <input
                 type="number"
                 #awardCount="ngModel"
@@ -60,9 +64,13 @@
                 class="form-control"
                 id="myinput"
                 required
-                placeholder="awardCount"
+                placeholder="Award Count"
               />
-           
+              <small
+                class="text-danger"
+                [class.d-none]="awardCount.valid || awardCount.untouched"
+                >Award Count is required</small
+              >
         </div>
 
         <br />
