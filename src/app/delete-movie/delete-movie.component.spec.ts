@@ -1,3 +1,4 @@
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DeleteMovieComponent } from './delete-movie.component';
@@ -39,6 +40,7 @@ describe('DeleteMovieComponent', () => {
     });
   });
 
+<<<<<<< HEAD
   it('should have Add Film Button', () => {
     fixture = TestBed.createComponent(DeleteMovieComponent);
     const btn = fixture.debugElement.nativeElement.querySelector('#delete-btn');
@@ -46,3 +48,6 @@ describe('DeleteMovieComponent', () => {
   });
 
 });
+=======
+});
+>>>>>>> 5ea87089c94143b98449765bf749730e3c06c6bf
