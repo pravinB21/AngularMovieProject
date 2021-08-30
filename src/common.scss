@@ -1,38 +1,38 @@
-$base-color:white;
+$base-color: white;
 $background-color: rgba(0, 0, 0, 0.3);
+
 .header {
-    padding: 1%;
-    margin: auto;
-    background: $background-color;
-    text-align: center;
-    margin-top: 1%;
-    color: $base-color;
-  }
-  
+  padding: 1%;
+  margin: auto;
+  background: $background-color;
+  text-align: center;
+  margin-top: 1%;
+  color: $base-color;
+}
+
+.container {
+  margin: auto;
+  width: 50%;
+  background: $background-color;
+  border-radius: 5%;
+}
+
+.container--margin {
+  margin-top: 1%;
+}
+
+@media only screen and (max-width: 600px) {
   .container {
     margin: auto;
-    width: 50%;
+    width: 100%;
     background: $background-color;
-    border-radius: 5%;
   }
-  
-  .container--margin {
-    margin-top: 1%;
-  }
-  
-  @media only screen and (max-width: 600px) {
-    .container {
-      margin: auto;
-      width: 100%;
-      background: $background-color;
-    }
-  }
-  
-  .form {
-    padding: 3%;
-    color: $base-color;
-  }
-  
+}
+
+.form {
+  padding: 3%;
+  color: $base-color;
+
   .form__input {
     width: 100%;
     margin: 1%;
@@ -43,7 +43,7 @@ $background-color: rgba(0, 0, 0, 0.3);
     /* margin: 1%; */
     font-size: large;
   }
-  
+
   .form__input-field {
     width: 100%;
     background: none;
@@ -54,29 +54,30 @@ $background-color: rgba(0, 0, 0, 0.3);
     padding: 7px;
     padding-left: 12px;
   }
-  
+
   .form--center {
     text-align: center;
+
+    .form__btn {
+      color: $base-color;
+      background-color: transparent;
+      height: 40px;
+      width: 130px;
+      border-radius: 5px;
+      outline: 0;
+      border-color: $base-color;
+
+      &:hover {
+        background-color: $base-color;
+        color: black;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+      }
+    }
+    .form__home {
+      margin-top: 3%;
+    }
   }
-  
-  .form__btn {
-    color: $base-color;
-    background-color:transparent;
-    height: 40px;
-    width: 130px;
-    border-radius: 5px;
-    outline: 0;
-    border-color: $base-color;
-    
-  }
-  
-  .form__btn:hover {
-    background-color: $base-color;
-    color: black;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-  }
-  .form__home{
-    margin-top: 3%;
-  }
-  
+}
+
+

@@ -27,7 +27,7 @@
                   class="text-danger"
                   [class.d-none]="name.valid || name.untouched"
                 >
-                  Name is required</small
+                  name is required</small
                 >
                 <small class="text-danger" *ngIf="token"
                   >Director already exists</small
@@ -54,7 +54,7 @@
                 <small
                   class="text-danger"
                   [class.d-none]="age.valid || age.untouched"
-                  >Age is required</small
+                  >age is required</small
                 >
              
           
@@ -71,9 +71,8 @@
                   minlength="6"
                   id="myinput"
                   placeholder="Gender"
-                  required
                 />
-                <small class="text-danger" [class.d-none]="gender.valid || gender.untouched">Gender is required</small>
+                <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
               </div>
           
         
@@ -92,7 +91,7 @@
                   id="myinput"
                   placeholder="Award Count"
                 />
-                <small class="text-danger" [class.d-none]="awardCount.valid || awardCount.untouched">Award Count is required</small>
+                <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
               </div>
             
         
