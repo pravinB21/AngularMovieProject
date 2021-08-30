@@ -40,14 +40,4 @@ describe('DeleteMovieComponent', () => {
     });
   });
 
-<<<<<<< HEAD
-  it('should have Add Film Button', () => {
-    fixture = TestBed.createComponent(DeleteMovieComponent);
-    const btn = fixture.debugElement.nativeElement.querySelector('#delete-btn');
-    expect(btn.innerHTML).toBe('Delete movie');
-  });
-
 });
-=======
-});
->>>>>>> 5ea87089c94143b98449765bf749730e3c06c6bf

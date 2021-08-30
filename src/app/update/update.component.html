@@ -13,7 +13,7 @@
 
        
             <div class="form__input">
-              <label class="form__input-label" for=""> Director Name </label>
+              <label class="form__input-label" for="directorName"> Director Name </label>
               <input
                 type="text"
                 #name="ngModel"
@@ -22,7 +22,7 @@
                 [class.is-invalid]="name.invalid && name.touched"
                 required
                 class="form-control"
-                id="myinput"
+                id="directorName"
                 placeholder="Name"
               />
               <small
@@ -35,14 +35,14 @@
 
        
             <div class="form__input">
-              <label class="form__input-label" for=""> Age </label>
+              <label class="form__input-label" for="age"> Age </label>
               <input
                 type="number"
                 #age="ngModel"
                 required
                 ngModel
                 name="age"
-                id="myinput"
+                id="age"
                 class="form-control"
                 placeholder="Age"
               />
@@ -55,14 +55,14 @@
   
      
             <div class="form__input">
-              <label class="form__input-label" for="">Award Count</label>
+              <label class="form__input-label" for="awardCount">Award Count</label>
               <input
                 type="number"
                 #awardCount="ngModel"
                 name="awardCount"
                 ngModel
                 class="form-control"
-                id="myinput"
+                id="awardCount"
                 required
                 placeholder="Award Count"
               />

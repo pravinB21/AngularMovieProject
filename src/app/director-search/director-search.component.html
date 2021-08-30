@@ -6,14 +6,14 @@
             <div class="col-md-4">
                 <form class="form">
                 <div class="form-group" >
-                    <input type="text" #search required name="search" class="form-control" id="myinput"
+                    <input type="text" for="myinput" #search required name="search" class="form-control" id="myinput"
                         placeholder="search here">
                 </div>
             </form>
             </div>
             <div class="col-md-4">
                 <div class="selection ">
-                    <select name="option" id="" class="custom-select" (change)="getValue($event)">
+                    <select name="option" for="myinput" id="myinput" class="custom-select" (change)="getValue($event)">
                         <option value=""></option>
                         <option value="director">Search Director</option>
                         <option value="film">Search for Director by Movie name</option>
