@@ -53,6 +53,17 @@ span:any;
       }
     })
   }
+
+  ageFlag:any=false;
+  inValidAge(age:any){
+    console.log(age);
+    if(age<18 || age >80){
+      this.ageFlag=true;
+    }else{
+      this.ageFlag=false
+    }
+
+  }
   director1:any;
   onSubmit(details:any){
     console.log(details)
