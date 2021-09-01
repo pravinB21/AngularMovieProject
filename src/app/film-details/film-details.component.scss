@@ -64,6 +64,7 @@
   float: right;
   font-size: 28px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .modal-close:hover,
@@ -91,4 +92,8 @@
 
 .content {
   width: 50%;
+}
+
+.form__input-field .ng-pristine .ng-invalid .ng-touched{
+  border: 1px solid red;
 }

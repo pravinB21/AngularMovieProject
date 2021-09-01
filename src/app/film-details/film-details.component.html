@@ -2,104 +2,157 @@
   <h3 class="header-title">Add Film Details</h3>
 </div>
 
-<div class="container container--margin">
-
-      <form
-        #form2="ngForm"
-        class="form"
-        (ngSubmit)="onSubmit(form2.value)"
-        novalidate
-        autocomplete="off"
+<!-- <div class="container container--margin">
+  <form
+    #form2="ngForm"
+    class="form"
+    (ngSubmit)="onSubmit(form2.value)"
+    novalidate
+    autocomplete="off"
+  >
+    <div class="form__input">
+      <label class="form__input-label" for="movie"> Movie Name </label>
+      <input
+        type="text"
+        #name="ngModel"
+        ngModel
+        name="name"
+        required
+        class="form__input-field"
+        id="movie"
+        placeholder="Name"
+      />
+      <small class="text-danger" [class.d-none]="name.valid || name.untouched"
+        >Movie Name is required</small
       >
-        <div class="form__input">
-       
-                <label class="form__input-label" for="movie"> Movie Name </label>
-                <input
-                  type="text"
-                  #name="ngModel"
-                  ngModel
-                  name="name"
-                  required
-                  class="form__input-field"
-                  id="movie"
-                  placeholder="Name"
-                />
-                <small
-                  class="text-danger"
-                  [class.d-none]="name.valid || name.untouched"
-                  >Movie Name is required</small
-                >
-           
-          
-        </div>
+    </div>
 
-        <div class="form__input">
-                <label class="form__input-label" for="boxOfficeCollection">
-                  Box Office Collection
-                </label>
-                <input
-                  type="number"
-                  #boxOfficeCollection="ngModel"
-                  required
-                  ngModel
-                  name="BoxOfficeCollection"
-                  class="form__input-field"
-                  id="boxOfficeCollection"
-                  placeholder="boxOfficeCollection"
-                />
-                <small class="text-danger" [class.d-none]='boxOfficeCollection.valid || boxOfficeCollection.untouched'>BoxOfficeCollection is
-                                        required</small>
-                <!-- <small class="text-danger" *ngIf='token==1'>user already exists</small> -->
-              </div>
-         
-        <div class="form__input">
-         
-                <label class="form__input-label" for="rating">Rating</label>
-                <input
-                  type="number"
-                  #rating="ngModel"
-                  name="ratings"
-                  ngModel
-                  class="form__input-field"
-                  required
-                  id="rating"
-                  placeholder="Rating"
-                />
-                <small class="text-danger" [class.d-none]="rating.valid || rating.untouched">Rating is required</small>
-              </div>
- 
-        <div class="form__input">
-         
-                <label class="form__input-label" for="director">Director Name</label>
-                <input
-                  type="text"
-                  #director="ngModel"
-                  name="director"
-                  ngModel
-                  [class.is-invalid]="director.invalid && director.touched"
-                  required
-                  class="form__input-field"
-                  id="director"
-                  placeholder="Director name"
-                />
-                <small class="text-danger" [class.d-none]="director.valid || director.untouched">Director is required</small>
+    <div class="form__input">
+      <label class="form__input-label" for="boxOfficeCollection">
+        Box Office Collection
+      </label>
+      <input
+        type="number"
+        #boxOfficeCollection="ngModel"
+        required
+        ngModel
+        name="BoxOfficeCollection"
+        class="form__input-field"
+        id="boxOfficeCollection"
+        placeholder="boxOfficeCollection"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="
+          boxOfficeCollection.valid || boxOfficeCollection.untouched
+        "
+        >BoxOfficeCollection is required</small
+      >
+    </div>
 
-          
-        </div>
-        <br />
-        <div class="form--center">
-          <button class="form__btn" type="submit">Add Film</button>
-          <h6 class="form__home">Go back to <a routerLink="/home">Home</a></h6>
-        </div>
-       </form>
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <div class="modal-header">
-              <span class="close" (click)="closeIt()">&times;</span>
-            </div>
-            <div class="modal-body">
-              <p>Your data uploaded successfully !!</p>
-            </div>
-          </div>
-        </div>
+    <div class="form__input">
+      <label class="form__input-label" for="rating">Rating</label>
+      <input
+        type="number"
+        #rating="ngModel"
+        name="ratings"
+        ngModel
+        class="form__input-field"
+        required
+        id="rating"
+        placeholder="Rating"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="rating.valid || rating.untouched"
+        >Rating is required</small
+      >
+    </div>
+
+    <div class="form__input">
+      <label class="form__input-label" for="director">Director Name</label>
+      <input
+        type="text"
+        #director="ngModel"
+        name="director"
+        ngModel
+        [class.is-invalid]="director.invalid && director.touched"
+        required
+        class="form__input-field"
+        id="director"
+        placeholder="Director name"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="director.valid || director.untouched"
+        >Director is required</small
+      >
+    </div> -->
+
+
+<div class="container container--margin">
+  <form
+    class="form"
+    [formGroup]="filmForm"
+    (ngSubmit)="onSubmit()"
+    autocomplete="off"
+  >
+    <div class="form__input">
+      <label class="form__input-label" for="">Movie Name</label>
+      <input
+        type="text"
+        formControlName="name"
+        class="form__input-field"
+        placeholder="Enter Movie Name"
+      />
+      <small  class="text-danger" *ngIf="f.name.touched && f.name.invalid">Name is required</small>
+    </div>
+    <div class="form__input">
+      <label class="form__input-label" for="">Box Office Collection</label>
+      <input
+        type="number"
+        formControlName="boxOfficeCollection"
+        class="form__input-field"
+        placeholder="Box Office Collection"
+      />
+      <small  class="text-danger" *ngIf="f.boxOfficeCollection.touched && f.boxOfficeCollection.invalid">Box Office Collection is required</small>
+    </div>
+    <div class="form__input">
+      <label class="form__input-label" for="">Ratings</label>
+      <input
+        type="number"
+        formControlName="ratings"
+        class="form__input-field"
+        placeholder="Rating"
+      />
+      <small  class="text-danger" *ngIf="f.ratings.touched && f.ratings.invalid">Ratings are required</small>
+    </div>
+    <div class="form__input">
+      <label class="form__input-label" for="">Director Name</label>
+      <input
+        type="text"
+        formControlName="director"
+        class="form__input-field"
+        placeholder="Director"
+      />
+      <small  class="text-danger" *ngIf="f.director.touched && f.director.invalid">Director name is required</small>
+    </div>
+
+    <div class="form--center">
+      <button class="form__btn" type="submit" [disabled]="!filmForm.valid">
+        Add Film
+      </button>
+      <h6 class="form__home">Go back to <a routerLink="/home">Home</a></h6>
+    </div>
+  </form>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" (click)="closeIt()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p>Your data uploaded successfully !!</p>
+      </div>
+    </div>
+  </div>
 </div>

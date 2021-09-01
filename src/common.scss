@@ -56,6 +56,7 @@
 
   .form--center {
     text-align: center;
+    margin-top: 5%;
 
     .form__btn {
       color: $base-color;
@@ -77,6 +78,10 @@
       margin-top: 3%;
     }
   }
+}
+
+.form__input-field.ng-pristine.ng-invalid.ng-touched{
+  border: 1px solid red;
 }
 
 
