@@ -27,7 +27,7 @@ export class DirectorSearchComponent implements OnInit {
     this.name = detail
     if (this.select === "director") {
       this.matchName(this.name).subscribe(data => {
-        console.log(data);
+        // console.log(data);
         this.directorData = data.data;
         this.directorFlag=true;
         this.directorFlag2=false;
@@ -37,7 +37,7 @@ export class DirectorSearchComponent implements OnInit {
     }
     else if (this.select === 'film') {
       this.getMovieDir(this.name).subscribe(data => {
-        console.log(data)
+        // console.log(data)
         this.directorData=data.directordata;
         this.directorFlag=false;
         this.movieFlag=true;
@@ -47,9 +47,9 @@ export class DirectorSearchComponent implements OnInit {
     }
     if(this.select==='movie'){
       this.getAllMovies(this.name).subscribe(data=>{
-        console.log(data);
+        // console.log(data);
         this.movies=data.movies;
-        console.log(this.movies[0])
+        // console.log(this.movies[0])
         this.directorFlag=false;
         this.movieFlag=false;
         this.directorFlag2=true;

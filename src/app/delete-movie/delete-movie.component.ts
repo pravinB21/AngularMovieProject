@@ -35,16 +35,16 @@ export class DeleteMovieComponent implements OnInit {
     //     //   }
     //     // };
     //   };
-      closeIt(){
-        this.modal.style.display="none";
-      }
+      // closeIt(){
+      //   this.modal.style.display="none";
+      // }
 
   deleteMovie(movie:any){
     console.log(movie)
-    this.deleteFilm(movie).subscribe(data =>{
-      console.log(data,'deleted')
+    this.deleteFilm(movie).subscribe(
+
       // this.modalCode();
-    })
+    )
   }
 
   

@@ -15,7 +15,7 @@
               ngModel
               name="name"
               required
-              class="del-form__field"
+              class="form-control"
               id="movie"
               placeholder="Name"
             />
@@ -27,7 +27,7 @@
        
           </div>
           <div class="del-form--center">
-            <button class="del-form__btn">Delete movie</button> 
+            <button class="del-form__btn" id="delete-btn">Delete movie</button> 
             <h6 class="del-form__home">Go back to <a routerLink="/home">Home</a></h6>
           </div>
         </form>
@@ -35,7 +35,7 @@
           <div id="myModal" class="modal">
             <div class="modal-content">
               <div class="modal-header">
-                <span class="modal-close" (click)="closeIt()">&times;</span>
+                <!-- <span class="modal-close" (click)="closeIt()">&times;</span> -->
               </div>
               <div class="modal-body">
                 <p>Your data uploaded successfully !!</p>

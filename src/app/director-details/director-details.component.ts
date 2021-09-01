@@ -37,9 +37,9 @@ span:any;
   //     //   }
   //     // };
   //   };
-    closeIt(){
-      this.modal.style.display="none";
-    }
+    // closeIt(){
+    //   this.modal.style.display="none";
+    // }
   invalidName(name:any){
     console.log(name)
     this.dirName=name;
@@ -68,10 +68,11 @@ span:any;
   onSubmit(details:any){
     console.log(details)
     this.director1=details;
-    this.postData(this.director1).subscribe(data=>{
-      // this.modalCode();
-    })
+    // this.postData(this.director1).subscribe(data=>{
+    //   // this.modalCode();
+    // })
 
+    this.postData(this.director1).subscribe()
   }
 
   getData(): Observable<any> {
